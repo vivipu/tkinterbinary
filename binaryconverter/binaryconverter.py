@@ -7,7 +7,6 @@ def click():
     output.insert(END, binary)
 def close_window():
     window.destroy()
-    exit()
 #window config
 window = Tk()
 window.title("Binary converter")
