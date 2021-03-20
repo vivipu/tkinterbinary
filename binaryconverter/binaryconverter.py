@@ -23,7 +23,7 @@ textentry.grid(row = 1, column = 0, sticky = W)
 Label(window, text = "\n", bg="white", fg="black", font = "none 12").grid(row = 2, column = 0, sticky = W)
 Button(window, text = "Enter", width = 6, command = click).grid(row = 2, column = 0, sticky = W)
 #another label                      
-Label(window, text = "\nYour text converted to binary notation. Use your scrollwheel to read the full binary text..", bg="white", fg="black", font = "none 12").grid(row = 3, column = 0, sticky = W)
+Label(window, text = "Here is your text converted to binary notation. If necessary, use your scrollwheel to read the full text.", bg="white", fg="black", font = "none 12").grid(row = 3, column = 0, sticky = W)
 #text box
 output = Text(window, width = 75, height = 5, wrap = WORD, background = "white")
 output.grid(row = 4, column = 0, columnspan = 2, sticky = W)
