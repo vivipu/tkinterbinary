@@ -34,8 +34,8 @@ window.iconbitmap("binary.ico")
 window.configure(bg = "#f7f5fb", padx = "5", pady = "5")
 window.resizable(0, 0)
 #labels
-Label(window, text = "Enter anything you'd like to convert to or from binary notation.", bg="#f7f5fb", fg="#0a0908", font="none 12",).grid(row = 0, column = 0, sticky = W)
-Label(window, text = "Integers are converted as integers, rather than in their string form.", bg="#f7f5fb", fg="#0a0908", font="none 12",).grid(row = 1, column = 0, sticky = W)
+Label(window, text = "Enter anything you'd like to convert to or from binary notation.", bg="#f7f5fb", fg="#0a0908", font="none 11",).grid(row = 0, column = 0, sticky = W)
+Label(window, text = "Integers are converted as integers, rather than in their string form.", bg="#f7f5fb", fg="#0a0908", font="none 11",).grid(row = 1, column = 0, sticky = W)
 #text entry
 textentry = Entry(window, width = 75, bg = "#f7f5fb", fg = "#0a0908")
 textentry.grid(row = 2, column = 0, sticky = W)
