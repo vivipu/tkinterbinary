@@ -1,4 +1,4 @@
 # tkinterbinary
 ![](Binary.gif)
 
-A Tkinter app which converts strings into binary notation.
+A Tkinter app which converts strings or integers into binary notation, and vice-versa.
