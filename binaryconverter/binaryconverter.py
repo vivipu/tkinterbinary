@@ -1,30 +1,40 @@
 from tkinter import * 
-#exit function
-def bindeci(binval):
-    return int(binval, 2)
+#insert output function
 def click():
     numbers = "0123456789"
     entered_text = textentry.get()
+    #amount of numbers in text
     nums = 0
+    #amount of binary values in text
     bincount = 0
     out = ""
+    #clear output
+    output.delete(0.0, END)
+    #check if input is int, check if binary was entered
     for x in entered_text:
         if x in numbers:
             nums += 1
         if x == "0" or x == "1":
             bincount += 1
-    output.delete(0.0, END)
+    #if input is not an int (therefore it is a string), output = the binary for the given string
     if nums != len(entered_text):
         out = "".join(format(ord(x), "08b") for x in entered_text)
+    #if input is an int, output = the binary for the given int
+    elif nums == len(entered_text) and nums != bincount:
+        out = bin(int(entered_text)).replace("0b","")
+    #if input is binary, convert
     elif len(entered_text) == bincount:
+        #try making the output be a converted string first
         out = ''.join(chr(int(entered_text[i*8:i*8+8],2)) for i in range(len(entered_text)//8))
+        #make the output convert back into binary for testing purposes
         test = "".join(format(ord(x), "08b") for x in out).replace("0b","")
+        #if the binary test does not equal the initial entered text, the output is an integer instead
         if not out or entered_text != test:
             arr = list(entered_text)
             out = int("".join([str(x) for x in arr]), 2)
-    elif nums == len(entered_text) and nums != bincount:
-        out = bin(int(entered_text)).replace("0b","")
+    #insert output
     output.insert(END, out)
+#window close function
 def close_window():
     window.destroy()
 #window config
