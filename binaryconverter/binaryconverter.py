@@ -40,7 +40,6 @@ def close_window():
 #window config
 window = Tk()
 window.title("Binary converter")
-window.iconbitmap("binary.ico")
 window.configure(bg = "#f7f5fb", padx = "5", pady = "5")
 window.resizable(0, 0)
 #labels
@@ -55,7 +54,7 @@ Button(window, text = "Convert", width = 8, command = click, relief = "flat", bg
 #another label                      
 Label(window, text = "Here is your text converted to or from binary notation. Use your scrollwheel to read the full text.", bg="#f7f5fb", fg="#0a0908", font = "none 11").grid(row = 4, column = 0, sticky = W)
 #text box
-output = Text(window, width = 75, height = 5, wrap = WORD, bg = "#f7f5fb")
+output = Text(window, width = 75, height = 5, wrap = WORD, bg = "#f7f5fb", fg="black")
 output.grid(row = 5, column = 0, columnspan = 2, sticky = W)
 #exit
 Label(window, text = "\n", bg="#f7f5fb", fg="#0a0908", font = "none 12").grid(row = 7, column = 0, sticky = W)
