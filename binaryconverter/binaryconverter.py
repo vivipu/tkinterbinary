@@ -16,8 +16,7 @@ def bincheck(text):
     return bincount;
 
 def stringtobin(text):
-    spaceless = text.replace(" ", "")
-    out = "".join(format(ord(x), "08b") for x in spaceless)
+    out = "".join(format(ord(x), "08b") for x in text)
     return out
 
 def inttobin(text):
